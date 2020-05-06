@@ -11,7 +11,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Coffee Cupping and Price Analysis and Modeling </title>
+  <title>Price Modeling--Linear Models</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <!--CSS Link-->
   <link rel="stylesheet" type="text/css" href="static/css/style.css">
@@ -23,7 +23,7 @@
     <div class="navigation">
       <nav class="navbar navbar-expand-md navbar-light">
      
-        <a class="navbar-brand" style="background-color: #0BADA6;" href="index.html">Coffeepedia!!</a>
+        <a class="navbar-brand" href="index.html">Coffeepedia!!</a>
      
    
         <!-- Collapse button -->
@@ -78,20 +78,24 @@
           <div class="col-lg-12 col-md-12">
             <!-- Left box  -->
             <div class="box">
-              <h3 class="title">Coffee Price Modeling Analysis</h3>
+              <h3 class="title">Coffee Price Modeling</h3>
               <hr>
               <p>
-                X,y are determined to make modelings to predict the coffee prices. X would be opening price, high price, and low price. y would be closing price. 
-                When x,y are plotted, it shows linear line, which suggests that linear regressiong modeling would be a good choice for this dataset.
-                Linear regression, Ridge regression, Lasso regression,ElasticNet regression, and Decision tree regression are selected to predict the coffee stock prices.
-                All modelings have accuracy over 0.98, and when actual price and predicted price are plotted, and it shows as linear graph.
-                The noises in the graphs are so little, it is negletable.
+                Before creating any models, we decided which feature to assign to our y values. We decided the most relevant feature
+                to predict would be the closing price, leaving opening, high and low prices to act as our X values. Plotting X and y 
+                returns a linear trend, suggesting linear modeling may be a good choice for this data.
+              </p>
+              <p>
+                Linear regression, Ridge regression, Lasso regression, ElasticNet regression, and Decision tree regression were selected 
+                to build models and predict the coffee stock prices. Each of these models returned an accuracy over 0.98, and when actual 
+                price and predicted price are plotted against each other it creates a linear graph. The noise in the graphs are so minute, it is negletable.
               </p>
               <img src="images/price_model_X,y Relationship.png" class="rounded " alt="X y Relationship">
               <h3 class="title">The Models</h3>
               <hr>
               <p>
-                We trained four linear models on our data: Linear regression, Lasso, Ridge and Elasticnet
+                We trained four linear models on our data: Linear regression, Lasso, Ridge and Elasticnet.
+              </p>
                 <img src="images/price_1.png" style="padding-left:80px; padding-right:80px;"class="rounded " alt="Price1">
                 <img src="images/price_2.png" style="padding-left:80px; padding-right:80px;" class="rounded " alt="Price2">
                 <img src="images/price_3.png" style="padding-left:80px; padding-right:80px;" alt="Price3">
@@ -99,11 +103,12 @@
                 <img src="images/price_5.png" style="padding-left:80px; padding-right:80px;"class="rounded " alt="Price5">
                 <img src="images/price_6.png" style="padding-left:80px; padding-right:80px;" class="rounded " alt="Price6">
                 <img src="images/price_7.png" style="padding-left:80px; padding-right:80px;" alt="Price7">
-              </p>
+              
               <br>
-
-              <p>All the linear models performed quite well, all with over 99% accuracy, and did not require hyperparameter tuning.
-                 Predicted scores for each model were plotted against actual scores using Matplotlib subplots to compare them side by side.
+              <br>
+              <p>
+                All the linear models performed quite well, all with over 99% accuracy, and did not require hyperparameter tuning.
+                Predicted scores for each model were plotted against actual scores using Matplotlib subplots to compare them side by side.
               </p>
               <br>
               <img src="images/price_model_summary.png" class="rounded " alt="price summary">
@@ -114,7 +119,7 @@
     </div>
       <!-- Footer Section -->
     <footer>
-      <div class="footer">Copyright &copy;Jen Barny, Jaewon Kim, Rajitha Baddam, Preeti Chouksey 2020</div>
+      <div class="footer">Copyright &copy; Jen Barny, Jaewon Kim, Rajitha Baddam, Preeti Chouksey 2020</div>
     </footer>
     
     <!-- Bootstrap JS -->
