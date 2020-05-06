@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--<style>
+      img{ width: auto;
+            height: auto;
+            max-width: 100%;
+            max-height: 100%;}
+    </style>-->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Coffee Cupping and Price Analysis and Modeling </title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!--CSS Link-->
+  <link rel="stylesheet" type="text/css" href="static/css/style.css">
+</head>
+<body>
+    <!-- Navigation Section -->
+
+       
+    <div class="navigation">
+      <nav class="navbar navbar-expand-md navbar-light">
+     
+        <a class="navbar-brand" style="background-color: #0BADA6;" href="index.html">Coffeepedia!!</a>
+     
+   
+        <!-- Collapse button -->
+        <button class="navbar-toggler  border border-white" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+          aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Drop down -->
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="WhatisCupping.html">What is Cupping?</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Cupping Modeling
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="CupLinearModel.html">Linear Models</a>
+                <a class="dropdown-item" href="CupSVRModel.html">SVR Model</a>
+                <a class="dropdown-item" href="CupRandomForest.html">Random Forest Model</a>
+                <a class="dropdown-item" href="CupNeuralNetwork.html">Neural Network Model</a>
+                <a class="dropdown-item" href="CupAnalysis.html">Cupping Analysis</a>
+              </div>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+                Coffee Price Modeling
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="priceTrends.html">Price Trends</a>
+                <a class="dropdown-item" href="priceModel.html">Price Model</a>
+                <a class="dropdown-item" href="priceAnalysis.html">Price Analysis </a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="whoarewe.html">Who We Are</a>
+            </li>
+  
+          </ul>
+          
+        </div>
+      </nav>
+    </div>
+   <br>
+   <br>
+  <div class="container">
+    <!--BACKGROUND IMAGE-->
+        <div class="row">
+            
+            <!--PAGE BODY-->
+            <div class="col-md-12">
+                <h3 class="display-6 header-text" style="text-align:center;">What is Coffee "Cupping"?</h3>
+              </div>
+          </div>
+        <div class="box">
+          <img src="images/coffee-steam.jpg" class="rounded" alt="Steaming cup of joe">
+        <p class="caption">Image Source: Getty Images</p>
+        </div>     
+                <p>
+                    <strong>Coffee cupping</strong>, or <i>coffee tasting</i>, is the practice of sampling coffees to distinguish between 
+                    different attributes, namely aroma, flavor, aftertaste, acidity, sweetness, body and balance. The 
+                    <a href="https://www.coffeeinstitute.org/">Coffee Quality Institute</a> trains "Q graders" (quality graders) 
+                    to test for these attributes, as well as uniformity, clean cup and defects. Scores are then aggregated to grade 
+                    the coffee on a 100-point scale. 
+                </p>
+                <div class="accordion" id="accordionExample">
+                  <div class="card">
+                    <div class="card-header" id="headingone">
+                      <h2 class="mb-0">
+                        <button class="dropdown-item" type="button" data-toggle="collapse" data-target="#Aroma" aria-expanded="false" aria-controls="Aroma">
+                          <h4>Aroma</h4>
+                        </button>
+                      </h2>
+                    </div>
+                    <div id="Aroma" class="collapse" aria-labelledby="headingone" data-parent="#accordionExample">
+                      <div class="card-body">
+                          The aromatic aspects include Fragrance (defined as the smell of the ground coffee when still dry) and Aroma 
+                          (the smell of the coffee when infused with hot water). One can evaluate this at three distinct steps in the 
+                          cupping process: (1) sniffing the grounds placed into the cup before pouring water onto the coffee; (2) sniffing 
+                          the aromas released while breaking the crust; and (3) sniffing the aromas released as the coffee steeps. Specific 
+                          aromas can be noted under "qualities" and the intensity of the dry, break, and wet aroma aspects noted on the 
+                          5-point vertical scales. The score finally given should reflect the preference of all three aspects of a sample's 
+                          Fragrance/Aroma.
+                      </div>
+                    </div> 
+                    </div>                 
+                
+                  <div class="card" background-color to #00AA9E>
+                      <div class="card-header" class="p-3 mb-2 bg-white text-dark" id="heading2">
+                        <h2 class="mb-0">
+                            <button class="dropdown-item" type="button" data-toggle="collapse" data-target="#Flavor" aria-expanded="true" aria-controls="Flavor">
+                                <h4>Flavor</h4>
+                              </button>
+                        </h2>
+                      </div>
+    
+                      <div id="Flavor" class="collapse" aria-labelledby="heading2" data-parent="#accordionExample">
+                        <div class="card-body">
+                          Flavor represents the coffee's principal character, the "mid-range" notes, in between the first impressions 
+                          given by the coffee's first aroma and acidity to its final aftertaste. It is a combined impression of all 
+                          the gustatory (taste bud) sensations and retro-nasal aromas that go from the mouth to nose. The score given 
+                          for Flavor should account for the intensity, quality and complexity of its combined taste and aroma, 
+                          experienced when the coffee is slurped into the mouth vigorously so as to involve the entire palate in the 
+                          evaluation.
+                        </div>
+                      </div>
+                    </div>
+                  <div class="card">
+                    <div class="card-header" id="heading3">
+                      <h2 class="mb-0">
+                          <button class="dropdown-item" type="button" data-toggle="collapse" data-target="#AfterTaste" aria-expanded="true" aria-controls="AfterTaste">
+                              <h4>AfterTaste</h4>
+                            </button>
+                      </h2>
+                    </div>
+    
+                    <div id="AfterTaste" class="collapse" aria-labelledby="heading3" data-parent="#accordionExample">
+                      <div class="card-body">
+                          Aftertaste is defined as the length of positive flavor (taste and aroma) qualities emanating from the back 
+                          of the palate and remaining after the coffee is expectorated or swallowed. If the aftertaste were short or 
+                          unpleasant, a lower score would be given.
+                      </div>
+                    </div>
+                  </div>
+                    <div class="card">
+                      <div class="card-header" id="heading4">
+                        <h2 class="mb-0">
+              
+                            <button class="dropdown-item" type="button" data-toggle="collapse" data-target="#Acidity" aria-expanded="true" aria-controls="Acidity">
+                              <h4>Acidity</h4>
+                            </button>
+                        </h2>
+                      </div>
+    
+                      <div id="Acidity" class="collapse" aria-labelledby="heading4" data-parent="#accordionExample">
+                        <div class="card-body">
+                          Acidity is often described as "brightness" when favorable or "sour" when unfavorable. At its best, acidity 
+                          contributes to a coffee's liveliness, sweetness, and fresh- fruit character and is almost immediately 
+                          experienced and evaluated when the coffee is first slurped into the mouth. Acidity that is overly intense 
+                          or dominating may be unpleasant, however, and excessive acidity may not be appropriate to the flavor profile 
+                          of the sample. The final score marked on the horizontal tick-mark scale should reflect the panelist's 
+                          perceived quality for the Acidity relative to the expected flavor profile based on origin characteristics 
+                          and/or other factors (degree of roast, intended use, etc.). Coffees expected to be high in Acidity, such as a 
+                          Kenya coffee, or coffees expected to be low in Acidity, such as a Sumatra coffee, can receive equally high 
+                          preference scores although their intensity rankings will be quite different.
+                        </div>
+                      </div>
+                    </div>
+                        <div class="card">
+                          <div class="card-header" id="heading5">
+                            <h2 class="mb-0">
+                              <button class="dropdown-item" type="button" data-toggle="collapse" data-target="#Body" aria-expanded="true" aria-controls="Body">
+                                  <h4>Body</h4>
+                                </button>
+                            </h2>
+                          </div>
+                          <div id="Body" class="collapse" aria-labelledby="heading5" data-parent="#accordionExample">
+                            <div class="card-body">
+                              Acidity is often described as "brightness" when favorable or "sour" when unfavorable. At its best, acidity 
+                              contributes to a coffee's liveliness, sweetness, and fresh- fruit character and is almost immediately 
+                              experienced and evaluated when the coffee is first slurped into the mouth. Acidity that is overly intense 
+                              or dominating may be unpleasant, however, and excessive acidity may not be appropriate to the flavor profile 
+                              of the sample. The final score marked on the horizontal tick-mark scale should reflect the panelist's 
+                              perceived quality for the Acidity relative to the expected flavor profile based on origin characteristics 
+                              and/or other factors (degree of roast, intended use, etc.). Coffees expected to be high in Acidity, such as a 
+                              Kenya coffee, or coffees expected to be low in Acidity, such as a Sumatra coffee, can receive equally high 
+                              preference scores although their intensity rankings will be quite different.
+                            </div>
+                          </div>
+                        </div>
+                          <div class="card">
+                              <div class="card-header" id="heading6">
+                                <h2 class="mb-0">
+                                  <button class="dropdown-item" type="button" data-toggle="collapse" data-target="#Balance" aria-expanded="true" aria-controls="Balance">
+                                      <h4>Balance</h4>
+                                    </button>
+                                </h2>
+                              </div>
+                              <div id="Balance" class="collapse" aria-labelledby="heading6" data-parent="#accordionExample">
+                                <div class="card-body">
+                                  Acidity is often described as "brightness" when favorable or "sour" when unfavorable. At its best, acidity 
+                                  contributes to a coffee's liveliness, sweetness, and fresh- fruit character and is almost immediately 
+                                  experienced and evaluated when the coffee is first slurped into the mouth. Acidity that is overly intense 
+                                  or dominating may be unpleasant, however, and excessive acidity may not be appropriate to the flavor profile 
+                                  of the sample. The final score marked on the horizontal tick-mark scale should reflect the panelist's 
+                                  perceived quality for the Acidity relative to the expected flavor profile based on origin characteristics 
+                                  and/or other factors (degree of roast, intended use, etc.). Coffees expected to be high in Acidity, such as a 
+                                  Kenya coffee, or coffees expected to be low in Acidity, such as a Sumatra coffee, can receive equally high 
+                                  preference scores although their intensity rankings will be quite different.
+                                </div>
+                              </div>
+                            </div>
+                              <div class="card">
+                                  <div class="card-header" id="heading7">
+                                    <h2 class="mb-0">
+                                      <button class="dropdown-item" type="button" data-toggle="collapse" data-target="#Uniformity" aria-expanded="true" aria-controls="Uniformity">
+                                          <h4>Uniformity</h4>
+                                        </button>
+                                    </h2>
+                                  </div>
+                                  <div id="Uniformity" class="collapse" aria-labelledby="heading7" data-parent="#accordionExample">
+                                    <div class="card-body">
+                                      Acidity is often described as "brightness" when favorable or "sour" when unfavorable. At its best, acidity 
+                                      contributes to a coffee's liveliness, sweetness, and fresh- fruit character and is almost immediately 
+                                      experienced and evaluated when the coffee is first slurped into the mouth. Acidity that is overly intense 
+                                      or dominating may be unpleasant, however, and excessive acidity may not be appropriate to the flavor profile 
+                                      of the sample. The final score marked on the horizontal tick-mark scale should reflect the panelist's 
+                                      perceived quality for the Acidity relative to the expected flavor profile based on origin characteristics 
+                                      and/or other factors (degree of roast, intended use, etc.). Coffees expected to be high in Acidity, such as a 
+                                      Kenya coffee, or coffees expected to be low in Acidity, such as a Sumatra coffee, can receive equally high 
+                                      preference scores although their intensity rankings will be quite different.
+                                    </div>
+                                  </div>
+                                </div>
+                                  <div class="card">
+                                      <div class="card-header" id="heading8">
+                                        <h2 class="mb-0">
+                                          <button class="dropdown-item" type="button" data-toggle="collapse" data-target="#CleanCup" aria-expanded="true" aria-controls="CleanCup">
+                                              <h4>Clean Cup</h4>
+                                            </button>
+                                        </h2>
+                                    </div>
+                                      <div id="CleanCup" class="collapse" aria-labelledby="heading8" data-parent="#accordionExample">
+                                        <div class="card-body">
+                                          Clean Cup refers to a lack of interfering negative impressions from first ingestion to final aftertaste, a 
+                                            "transparency" of cup. In evaluating this attribute, notice the total flavor experience from the time of 
+                                            the initial ingestion to final swallowing or expectoration. Any non-coffee like tastes or aromas will 
+                                          disqualify an individual cup. 2 points are awarded for each cup displaying the attribute of Clean Cup.
+                                        </div>
+                                      </div>
+                                    </div>
+                                      <div class="card">
+                                          <div class="card-header" id="heading9">
+                                            <h2 class="mb-0">
+                                              <button class="dropdown-item" type="button" data-toggle="collapse" data-target="#Sweetness" aria-expanded="true" aria-controls="Sweetness">
+                                                  <h4>Sweetness</h4>
+                                                </button>
+                                            </h2>
+                                        </div>
+                                          <div id="Sweetness" class="collapse" aria-labelledby="heading9" data-parent="#accordionExample">
+                                            <div class="card-body">
+                                              Acidity is often described as "brightness" when favorable or "sour" when unfavorable. At its best, acidity 
+                                              contributes to a coffee's liveliness, sweetness, and fresh- fruit character and is almost immediately 
+                                              experienced and evaluated when the coffee is first slurped into the mouth. Acidity that is overly intense 
+                                              or dominating may be unpleasant, however, and excessive acidity may not be appropriate to the flavor profile 
+                                              of the sample. The final score marked on the horizontal tick-mark scale should reflect the panelist's 
+                                              perceived quality for the Acidity relative to the expected flavor profile based on origin characteristics 
+                                              and/or other factors (degree of roast, intended use, etc.). Coffees expected to be high in Acidity, such as a 
+                                              Kenya coffee, or coffees expected to be low in Acidity, such as a Sumatra coffee, can receive equally high 
+                                              preference scores although their intensity rankings will be quite different.
+                                            </div>
+                                          </div>
+                                        </div>
+                                        </div>
+                                        <img src="images/Robusta-Cupping-form_vFeb2019.jpg" class="rounded " alt="Coffee Cupping Evaluation Form">
+                </div>
+          
+
+    
+    
+    <!-- Footer Section -->
+  <footer>
+    <div class="footer">Copyright &copy;Jen Barny, Jaewon kim, Rajitha Baddam, Preeti Chouksey 2020</div>
+  </footer>
+  
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"></script>
+  
+</body>
+</html>
+
+
